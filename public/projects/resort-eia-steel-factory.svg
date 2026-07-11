@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 405" width="720" height="405">
+  <rect width="720" height="405" fill="#0f172a"/>
+  <g stroke="#ffffff" stroke-opacity="0.35" stroke-width="1">
+    <line x1="0" y1="81" x2="720" y2="81"/>
+    <line x1="0" y1="162" x2="720" y2="162"/>
+    <line x1="0" y1="243" x2="720" y2="243"/>
+    <line x1="0" y1="324" x2="720" y2="324"/>
+    <line x1="90" y1="0" x2="90" y2="405"/>
+    <line x1="180" y1="0" x2="180" y2="405"/>
+    <line x1="270" y1="0" x2="270" y2="405"/>
+    <line x1="360" y1="0" x2="360" y2="405"/>
+    <line x1="450" y1="0" x2="450" y2="405"/>
+    <line x1="540" y1="0" x2="540" y2="405"/>
+    <line x1="630" y1="0" x2="630" y2="405"/>
+  </g>
+  <g fill="#f8fafc">
+    <rect x="200" y="180" width="70" height="130" fill-opacity="0.55"/>
+    <rect x="280" y="140" width="70" height="170" fill-opacity="0.75"/>
+    <rect x="360" y="200" width="70" height="110" fill-opacity="0.6"/>
+    <rect x="440" y="160" width="70" height="150" fill-opacity="0.9"/>
+  </g>
+  <line x1="170" y1="310" x2="540" y2="310" stroke="#f8fafc" stroke-width="4" stroke-opacity="0.85"/>
+</svg>

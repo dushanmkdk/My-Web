@@ -60,7 +60,18 @@ export type ValidSkills =
   | "FastAPI"
   | "SQL"
   | "NoSQL"
-  | "Framer Motion";
+  | "Framer Motion"
+  | "AutoCAD"
+  | "Civil 3D"
+  | "Revit"
+  | "ArcGIS Pro"
+  | "HEC-HMS"
+  | "Delft3D"
+  | "MIKE"
+  | "ANSYS Fluent"
+  | "MATLAB"
+  | "Fortran"
+  | "SAP2000";
 
 export type ValidCategory =
   | "Full Stack"
@@ -69,7 +80,12 @@ export type ValidCategory =
   | "UI/UX"
   | "Web Dev"
   | "Mobile Dev"
-  | "3D Modeling";
+  | "3D Modeling"
+  | "Coastal Engineering"
+  | "Structural Engineering"
+  | "Numerical Modeling"
+  | "Environmental Engineering"
+  | "Research";
 
 export type ValidExpType = "Personal" | "Professional";
 

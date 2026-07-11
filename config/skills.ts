@@ -9,152 +9,95 @@ export interface skillsInterface {
 
 export const skillsUnsorted: skillsInterface[] = [
   {
-    name: "Next.js",
+    name: "Delft3D",
     description:
-      "Effortlessly build dynamic apps with routing, layouts, loading UI, and API routes.",
+      "Set up, calibrate, and run coupled hydro- and morphodynamic simulations for coastal and estuarine systems.",
     rating: 5,
-    icon: Icons.nextjs,
+    icon: Icons.delft3d,
   },
   {
-    name: "React",
+    name: "ArcGIS Pro",
     description:
-      "Craft interactive user interfaces using components, state, props, and virtual DOM.",
+      "Analyze and visualize spatial and hydrographic survey data for coastal and infrastructure projects.",
     rating: 5,
-    icon: Icons.react,
+    icon: Icons.arcgis,
   },
   {
-    name: "GraphQL",
+    name: "HEC-HMS",
     description:
-      "Fetch data precisely with a powerful query language for APIs and runtime execution.",
-    rating: 4,
-    icon: Icons.graphql,
-  },
-  {
-    name: "Nest.js",
-    description:
-      "Create scalable and modular applications with a progressive Node.js framework.",
-    rating: 4,
-    icon: Icons.nestjs,
-  },
-  {
-    name: "express.js",
-    description:
-      "Build web applications and APIs quickly using a fast, unopinionated Node.js framework.",
+      "Model rainfall-runoff processes and flood hydrology for watershed and drainage studies.",
     rating: 5,
-    icon: Icons.express,
+    icon: Icons.hechms,
   },
   {
-    name: "Node.js",
+    name: "AutoCAD",
     description:
-      "Run JavaScript on the server side, enabling dynamic and responsive applications.",
+      "Draft and detail civil engineering plans, sections, and construction drawings.",
     rating: 5,
-    icon: Icons.nodejs,
+    icon: Icons.autocad,
   },
   {
-    name: "MongoDB",
+    name: "MATLAB",
     description:
-      "Store and retrieve data seamlessly with a flexible and scalable NoSQL database.",
+      "Process, analyze, and visualize numerical model outputs and field and experimental data.",
     rating: 5,
-    icon: Icons.mongodb,
+    icon: Icons.matlab,
   },
   {
-    name: "Typescript",
+    name: "Microsoft Office",
     description:
-      "Enhance JavaScript with static types, making code more understandable and reliable.",
+      "Prepare technical reports, presentations, and project documentation.",
     rating: 5,
-    icon: Icons.typescript,
+    icon: Icons.post,
   },
   {
-    name: "Javascript",
+    name: "MIKE",
     description:
-      "Create interactive and dynamic web experiences with the versatile scripting language.",
-    rating: 5,
-    icon: Icons.javascript,
-  },
-  {
-    name: "HTML 5",
-    description:
-      "Structure web content beautifully with the latest version of HyperText Markup Language.",
-    rating: 4,
-    icon: Icons.html5,
-  },
-  {
-    name: "CSS 3",
-    description:
-      "Style web pages creatively with the latest iteration of Cascading Style Sheets.",
-    rating: 4,
-    icon: Icons.css3,
-  },
-  {
-    name: "React Native",
-    description:
-      "Develop cross-platform mobile apps using React for consistent and engaging experiences.",
-    rating: 4,
-    icon: Icons.react,
-  },
-  {
-    name: "Angular",
-    description:
-      "Build dynamic web apps with a TypeScript-based open-source framework by Google.",
+      "Simulate wave propagation and harbor calmness for fishery harbor and port design projects.",
     rating: 3,
-    icon: Icons.angular,
+    icon: Icons.mike,
   },
   {
-    name: "Redux",
+    name: "ANSYS Fluent",
     description:
-      "Manage app state effectively using a predictable and centralized state container.",
+      "Run CFD simulations, including wind loading studies on low-rise building structures.",
     rating: 4,
-    icon: Icons.redux,
+    icon: Icons.ansys,
   },
   {
-    name: "Socket.io",
+    name: "Civil 3D",
     description:
-      "Enable real-time, bidirectional communication between clients and servers effortlessly.",
+      "Design site grading, roadways, and civil infrastructure with parametric 3D modeling.",
+    rating: 4,
+    icon: Icons.civil3d,
+  },
+  {
+    name: "Python",
+    description:
+      "Automate model setup, data processing, and analysis workflows for research projects.",
+    rating: 4,
+    icon: Icons.python,
+  },
+  {
+    name: "Revit",
+    description:
+      "Develop BIM models for building and infrastructure design coordination.",
     rating: 3,
-    icon: Icons.socketio,
+    icon: Icons.revit,
   },
   {
-    name: "Material UI",
+    name: "Fortran",
     description:
-      "Create stunning and responsive UIs with a popular React UI framework.",
-    rating: 4,
-    icon: Icons.mui,
-  },
-
-  {
-    name: "Tailwind CSS",
-    description:
-      "Design beautiful, modern websites faster with a utility-first CSS framework.",
-    rating: 5,
-    icon: Icons.tailwindcss,
-  },
-  {
-    name: "AWS",
-    description:
-      "Utilize Amazon Web Services to build and deploy scalable, reliable, and secure applications.",
+      "Read and adapt legacy numerical modeling codebases used in engineering research.",
     rating: 3,
-    icon: Icons.amazonaws,
+    icon: Icons.fortran,
   },
   {
-    name: "Bootstrap",
+    name: "Microsoft Project",
     description:
-      "Quickly create responsive and appealing web designs using a popular CSS framework.",
-    rating: 2,
-    icon: Icons.bootstrap,
-  },
-  {
-    name: "MySQL",
-    description:
-      "Manage and organize relational databases efficiently for data-driven applications.",
-    rating: 2,
-    icon: Icons.mysql,
-  },
-  {
-    name: "Netlify",
-    description:
-      "Manage and organize relational databases efficiently for data-driven applications.",
-    rating: 4,
-    icon: Icons.netlify,
+      "Plan and schedule construction and research project timelines.",
+    rating: 3,
+    icon: Icons.calendar,
   },
 ];
 

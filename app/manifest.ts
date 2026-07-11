@@ -2,10 +2,10 @@ import type { MetadataRoute } from "next";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "Naman Barkiya | Applied AI Engineer",
-    short_name: "Naman Barkiya",
+    name: "Dushan Kavishka | Coastal & Civil Engineer",
+    short_name: "Dushan Kavishka",
     description:
-      "Naman Barkiya - Applied AI Engineer working at the intersection of AI, data, and scalable software systems.",
+      "Dushan Kavishka - Graduate Research Assistant in Coastal and Port Engineering at the University of North Florida.",
     start_url: "/",
     display: "standalone",
     background_color: "#ffffff",
@@ -25,11 +25,10 @@ export default function manifest(): MetadataRoute.Manifest {
     ],
     categories: [
       "portfolio",
-      "ai",
-      "software engineering",
-      "machine learning",
-      "developer",
-      "web development",
+      "civil engineering",
+      "coastal engineering",
+      "research",
+      "engineering",
     ],
     lang: "en",
     dir: "ltr",

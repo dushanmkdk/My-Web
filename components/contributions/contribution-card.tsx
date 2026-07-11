@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 import { Icons } from "@/components/common/icons";
@@ -24,6 +25,16 @@ export default function ContributionCard({
               size={35}
               className="absolute bottom-3 right-3 border bg-background rounded-full p-1.5 sm:p-2 cursor-pointer text-muted-foreground z-10 w-8 h-8 sm:w-10 sm:h-10"
             />
+            {contribution.image && (
+              <div className="relative w-full h-[140px] flex-shrink-0 rounded-md overflow-hidden">
+                <Image
+                  src={contribution.image}
+                  alt={contribution.repo}
+                  fill
+                  className="object-cover"
+                />
+              </div>
+            )}
             <div className="flex min-h-[170px] flex-col justify-between rounded-md p-4 sm:p-6 pb-12 sm:pb-6 flex-grow">
               <div className="flex flex-row justify-between items-start gap-2 mb-4 min-w-0">
                 <h3 className="font-bold flex space-x-2 items-center min-w-0 flex-1">

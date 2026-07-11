@@ -18,8 +18,6 @@ interface ProjectPageProps {
   }>;
 }
 
-const githubUsername = "namanbarkiya";
-
 export default async function Project({ params }: ProjectPageProps) {
   const { projectId } = await params;
   let project = Projects.find((val) => val.id === projectId);
@@ -68,19 +66,19 @@ export default async function Project({ params }: ProjectPageProps) {
         <ChipContainer textArr={project.category} />
         <div className="mt-4 flex space-x-4">
           <Link
-            href={siteConfig.links.github}
+            href={siteConfig.links.linkedin}
             className="flex items-center space-x-2 text-sm"
           >
             <Image
               src={profileImg}
-              alt={"naman"}
+              alt={siteConfig.authorName}
               width={42}
               height={42}
               className="rounded-full bg-background"
             />
 
             <div className="flex-1 text-left leading-tight">
-              <p className="font-medium">{"Naman Barkiya"}</p>
+              <p className="font-medium">{siteConfig.authorName}</p>
               <p className="text-[12px] text-muted-foreground">
                 @{siteConfig.username}
               </p>

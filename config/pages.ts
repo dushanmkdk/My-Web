@@ -18,24 +18,26 @@ export const pagesConfig: PagesConfig = {
     description: "Welcome to my portfolio website.",
     metadata: {
       title: "Home",
-      description: "Naman Barkiya's portfolio website.",
+      description: "Dushan Kavishka's portfolio website.",
     },
   },
   skills: {
     title: "Skills",
-    description: "Key skills that define my professional identity.",
+    description:
+      "Key engineering software, numerical modeling, and analysis skills.",
     metadata: {
       title: "Skills",
       description:
-        "Naman Barkiya's key skills that define his professional identity.",
+        "Dushan Kavishka's key skills in coastal, civil, and numerical engineering.",
     },
   },
   projects: {
     title: "Projects",
-    description: "Showcasing impactful projects and technical achievements.",
+    description: "Research and academic engineering projects.",
     metadata: {
       title: "Projects",
-      description: "Naman Barkiya's projects in building web applications.",
+      description:
+        "Dushan Kavishka's research and academic projects in coastal and civil engineering.",
     },
   },
   contact: {
@@ -43,34 +45,32 @@ export const pagesConfig: PagesConfig = {
     description: "Let's connect and explore collaborations.",
     metadata: {
       title: "Contact",
-      description: "Contact Naman Barkiya.",
+      description: "Contact Dushan Kavishka.",
     },
   },
   contributions: {
     title: "Contributions",
-    description: "Open-source contributions and community involvement.",
+    description: "Publications, conference presentations, and awards.",
     metadata: {
       title: "Contributions",
       description:
-        "Naman Barkiya's open-source contributions and community involvement.",
+        "Dushan Kavishka's publications, conference presentations, and academic contributions.",
     },
   },
   resume: {
     title: "Resume",
-    description: "Naman Barkiya's resume.",
+    description: "Dushan Kavishka's resume.",
     metadata: {
       title: "Resume",
-      description: "Naman Barkiya's resume.",
+      description: "Dushan Kavishka's resume.",
     },
   },
   blogs: {
     title: "Blogs",
-    description:
-      "Thoughts on AI, software engineering, and building in public.",
+    description: "Notes and write-ups.",
     metadata: {
       title: "Blogs",
-      description:
-        "Naman Barkiya's blog — thoughts on AI, software engineering, and building in public.",
+      description: "Dushan Kavishka's blog.",
     },
   },
   experience: {
@@ -79,7 +79,7 @@ export const pagesConfig: PagesConfig = {
     metadata: {
       title: "Experience",
       description:
-        "Naman Barkiya's professional journey and experience timeline.",
+        "Dushan Kavishka's professional journey and experience timeline.",
     },
   },
 };

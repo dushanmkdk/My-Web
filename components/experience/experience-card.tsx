@@ -30,7 +30,18 @@ interface ExperienceCardProps {
 
 const ExperienceCard: React.FC<ExperienceCardProps> = ({ experience }) => {
   return (
-    <div className="group relative overflow-hidden rounded-lg border bg-background p-4 sm:p-6 transition-all duration-300">
+    <div className="group relative overflow-hidden rounded-lg border bg-background transition-all duration-300">
+      {experience.coverImage && (
+        <div className="relative w-full h-[140px] flex-shrink-0">
+          <Image
+            src={experience.coverImage}
+            alt={`${experience.position} at ${experience.company}`}
+            fill
+            className="object-cover"
+          />
+        </div>
+      )}
+      <div className="p-4 sm:p-6">
       <div className="flex items-start gap-3 sm:gap-4">
         {experience.logo && (
           <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg border-2 border-border overflow-hidden bg-white flex-shrink-0">
@@ -103,6 +114,7 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({ experience }) => {
             <Icons.chevronRight className="ml-2 h-4 w-4" />
           </Link>
         </Button>
+      </div>
       </div>
     </div>
   );

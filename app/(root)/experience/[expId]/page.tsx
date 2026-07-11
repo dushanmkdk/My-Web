@@ -87,6 +87,25 @@ export default async function ExperienceDetailPage({
                 </li>
               ))}
             </ul>
+            {experience.images && experience.images.length > 0 && (
+              <div className="mt-6">
+                <h3 className="font-semibold mb-4 text-sm uppercase tracking-wide text-muted-foreground">
+                  Gallery
+                </h3>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  {experience.images.map((img, idx) => (
+                    <Image
+                      key={idx}
+                      src={img}
+                      alt={`${experience.position} at ${experience.company} — photo ${idx + 1}`}
+                      width={720}
+                      height={405}
+                      className="rounded-md border bg-muted transition-colors"
+                    />
+                  ))}
+                </div>
+              </div>
+            )}
           </div>
         </AnimatedSection>
       ),
@@ -149,6 +168,17 @@ export default async function ExperienceDetailPage({
 
         <AnimatedSection delay={0.2}>
           <Card className="overflow-hidden rounded-lg border bg-background p-2 transition-all duration-300">
+            {experience.coverImage && (
+              <div className="relative w-full h-[220px] sm:h-[320px] rounded-md overflow-hidden mb-4">
+                <Image
+                  src={experience.coverImage}
+                  alt={`${experience.position} at ${experience.company}`}
+                  fill
+                  className="object-cover"
+                  priority
+                />
+              </div>
+            )}
             <CardHeader className="pb-6">
               <div className="flex flex-col gap-4">
                 <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
