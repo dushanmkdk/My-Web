@@ -53,7 +53,7 @@ export default function IndexPage() {
 
       <section className="relative overflow-hidden pb-8 pt-6 mb-0 md:pb-12 md:py-20 lg:py-32 h-screen flex items-center">
         <HeroBackgroundSlideshow />
-        <div className="absolute inset-0 z-0 bg-background/75" />
+        <div className="absolute inset-0 z-0 bg-background/70" />
         <div className="container relative z-10 flex max-w-[64rem] flex-col items-center gap-4 text-center -mt-20">
           <Image
             src={profileImg}
