@@ -23,7 +23,7 @@ export default function ContributionCard({
           <div className="relative rounded-lg border bg-background p-2 hover:bg-accent hover:text-accent-foreground transition-colors w-full h-full flex flex-col">
             <Icons.externalLink
               size={35}
-              className="absolute bottom-3 right-3 border bg-background rounded-full p-1.5 sm:p-2 cursor-pointer text-muted-foreground z-10 w-8 h-8 sm:w-10 sm:h-10"
+              className="absolute bottom-3 right-3 border bg-background rounded-full p-1.5 sm:p-2 cursor-pointer text-muted-foreground z-10 w-9 h-9 sm:w-10 sm:h-10"
             />
             {contribution.image && (
               <div className="relative w-full h-[140px] flex-shrink-0 rounded-md overflow-hidden">

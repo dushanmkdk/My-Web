@@ -140,7 +140,7 @@ export function WorldMap({
               >
                 {index === projectedPoints.length - 1 && (
                   <motion.circle
-                    r={4}
+                    r={6}
                     className="fill-foreground"
                     animate={{ scale: [1, 1.8, 1], opacity: [1, 0.4, 1] }}
                     transition={{
@@ -151,18 +151,18 @@ export function WorldMap({
                   />
                 )}
                 <circle
-                  r={4}
+                  r={6}
                   strokeWidth={2}
                   className="fill-foreground stroke-background"
                 />
                 <text
-                  y={-10}
+                  y={-14}
                   textAnchor="middle"
-                  className="fill-foreground text-[11px] font-medium"
+                  className="fill-foreground text-[22px] sm:text-[15px] font-semibold sm:font-medium"
                   style={{
                     paintOrder: "stroke",
                     stroke: "hsl(var(--background))",
-                    strokeWidth: 4,
+                    strokeWidth: 6,
                     strokeLinejoin: "round",
                   }}
                 >
@@ -180,18 +180,18 @@ export function WorldMap({
                 transform={`translate(${point.xy[0]}, ${point.xy[1]})`}
               >
                 <circle
-                  r={4}
+                  r={6}
                   strokeWidth={2}
                   className="fill-foreground stroke-background"
                 />
                 <text
-                  y={-10}
+                  y={-14}
                   textAnchor="middle"
-                  className="fill-foreground text-[11px] font-medium"
+                  className="fill-foreground text-[22px] sm:text-[15px] font-semibold sm:font-medium"
                   style={{
                     paintOrder: "stroke",
                     stroke: "hsl(var(--background))",
-                    strokeWidth: 4,
+                    strokeWidth: 6,
                     strokeLinejoin: "round",
                   }}
                 >

@@ -44,20 +44,20 @@ export default async function Project({ params }: ProjectPageProps) {
         >
           {formatDateFromObj(project.startDate)}
         </time>
-        <h1 className="flex items-center justify-between mt-2 font-heading text-4xl leading-tight lg:text-5xl">
+        <h1 className="flex flex-col items-start gap-2 sm:flex-row sm:items-center sm:justify-between mt-2 font-heading text-3xl leading-tight sm:text-4xl lg:text-5xl">
           {project.companyName}
-          <div className="flex items-center">
+          <div className="flex items-center -m-2">
             {project.githubLink && (
               <CustomTooltip text="Link to the source code.">
-                <Link href={project.githubLink} target="_blank">
-                  <Icons.gitHub className="w-6 ml-4 text-muted-foreground hover:text-foreground" />
+                <Link href={project.githubLink} target="_blank" className="p-2">
+                  <Icons.gitHub className="w-6 text-muted-foreground hover:text-foreground" />
                 </Link>
               </CustomTooltip>
             )}
             {project.websiteLink && (
               <CustomTooltip text="Please note that some project links may be temporarily unavailable.">
-                <Link href={project.websiteLink} target="_blank">
-                  <Icons.externalLink className="w-6 ml-4 text-muted-foreground hover:text-foreground " />
+                <Link href={project.websiteLink} target="_blank" className="p-2">
+                  <Icons.externalLink className="w-6 text-muted-foreground hover:text-foreground " />
                 </Link>
               </CustomTooltip>
             )}

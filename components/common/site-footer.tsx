@@ -20,7 +20,7 @@ export function SiteFooter({ className }: React.HTMLAttributes<HTMLElement>) {
                   variant: "ghost",
                   size: "sm",
                 }),
-                "h-10 w-10 p-2"
+                "h-11 w-11 p-2 md:h-10 md:w-10"
               )}
             >
               <item.icon className="h-5 w-5" />
