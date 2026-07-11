@@ -8,12 +8,19 @@ import { AnimatedText } from "@/components/common/animated-text";
 import { ClientPageWrapper } from "@/components/common/client-page-wrapper";
 import { HeroBackgroundSlideshow } from "@/components/common/hero-background-slideshow";
 import { Icons } from "@/components/common/icons";
+import {
+  GeoPoint,
+  HighlightedCountry,
+  WorldMap,
+} from "@/components/common/world-map";
 import ContributionCard from "@/components/contributions/contribution-card";
+import EducationCard from "@/components/education/education-card";
 import ExperienceCard from "@/components/experience/experience-card";
 import ProjectCard from "@/components/projects/project-card";
 import SkillsCard from "@/components/skills/skills-card";
 import { Button, buttonVariants } from "@/components/ui/button";
 import { featuredContributions } from "@/config/contributions";
+import { education } from "@/config/education";
 import { experiences } from "@/config/experience";
 import { pagesConfig } from "@/config/pages";
 import { featuredProjects } from "@/config/projects";
@@ -30,6 +37,21 @@ export const metadata: Metadata = {
     canonical: siteConfig.url,
   },
 };
+
+const journeyPoints: GeoPoint[] = [
+  { label: "Moratuwa, Sri Lanka", coordinates: [79.9012, 6.783] },
+  { label: "Jacksonville, FL", coordinates: [-81.6557, 30.3322] },
+];
+
+const journeyMarkers: GeoPoint[] = [
+  { label: "Oman", coordinates: [57.705, 19.6647] },
+];
+
+const journeyCountries: HighlightedCountry[] = [
+  { id: "144", label: "Sri Lanka" },
+  { id: "512", label: "Oman" },
+  { id: "840", label: "United States" },
+];
 
 export default function IndexPage() {
   // Structured data for personal portfolio
@@ -80,9 +102,8 @@ export default function IndexPage() {
           </AnimatedText>
           <div className="mt-4 max-w-[42rem] text-center">
             <p className="leading-normal text-muted-foreground text-sm sm:text-base">
-              Coastal and port engineering master&apos;s student with
-              hands-on experience in numerical and physical modeling of
-              coastal systems.
+              Coastal and port engineering master&apos;s student with hands-on
+              experience in numerical and physical modeling of coastal systems.
             </p>
           </div>
 
@@ -118,6 +139,36 @@ export default function IndexPage() {
           </AnimatedText>
         </div>
       </section>
+      <AnimatedSection
+        direction="up"
+        className="container space-y-6 py-10 my-14"
+        id="journey"
+      >
+        <div className="mx-auto flex max-w-[58rem] flex-col items-center space-y-4 text-center">
+          <AnimatedText
+            as="h2"
+            className="font-heading text-3xl leading-[1.1] sm:text-3xl md:text-6xl"
+          >
+            The Journey
+          </AnimatedText>
+          <AnimatedText
+            as="p"
+            delay={0.2}
+            className="max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7"
+          >
+            From Sri Lanka to Oman to Florida — the places behind my coastal and
+            port engineering work.
+          </AnimatedText>
+        </div>
+        <div className="mx-auto max-w-3xl">
+          <WorldMap
+            points={journeyPoints}
+            markers={journeyMarkers}
+            highlightedCountries={journeyCountries}
+            className="h-auto w-full"
+          />
+        </div>
+      </AnimatedSection>
       <AnimatedSection
         direction="up"
         className="container space-y-6 bg-muted py-10 my-14"
@@ -198,6 +249,38 @@ export default function IndexPage() {
             </Button>
           </Link>
         </AnimatedText>
+      </AnimatedSection>
+      <AnimatedSection
+        direction="up"
+        className="container space-y-6 py-10 my-14"
+        id="education"
+      >
+        <div className="mx-auto flex max-w-[58rem] flex-col items-center space-y-4 text-center">
+          <AnimatedText
+            as="h2"
+            className="font-heading text-3xl leading-[1.1] sm:text-3xl md:text-6xl"
+          >
+            Education
+          </AnimatedText>
+          <AnimatedText
+            as="p"
+            delay={0.2}
+            className="max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7"
+          >
+            Academic foundation in civil, coastal, and port engineering.
+          </AnimatedText>
+        </div>
+        <div className="mx-auto flex max-w-3xl flex-col gap-4">
+          {education.map((edu, index) => (
+            <AnimatedSection
+              key={edu.id}
+              delay={0.1 * (index + 1)}
+              direction="up"
+            >
+              <EducationCard education={edu} />
+            </AnimatedSection>
+          ))}
+        </div>
       </AnimatedSection>
       <AnimatedSection
         direction="up"
