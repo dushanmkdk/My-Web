@@ -1,5 +1,4 @@
-import Image from "next/image";
-
+import { GalleryGrid } from "@/components/common/gallery-grid";
 import { Icons } from "@/components/common/icons";
 import { ExtracurricularInterface } from "@/config/extracurricular";
 
@@ -28,22 +27,11 @@ export default function ExtracurricularCard({
             ))}
           </ul>
           {item.images.length > 0 && (
-            <div className="mt-4 grid grid-cols-3 gap-2 sm:grid-cols-4">
-              {item.images.map((img) => (
-                <div
-                  key={img}
-                  className="relative aspect-square overflow-hidden rounded-md border bg-muted"
-                >
-                  <Image
-                    src={img}
-                    alt={item.category}
-                    fill
-                    className="object-cover"
-                    sizes="(min-width: 640px) 20vw, 33vw"
-                  />
-                </div>
-              ))}
-            </div>
+            <GalleryGrid
+              images={item.images}
+              alt={item.category}
+              className="mt-4"
+            />
           )}
         </div>
       </div>

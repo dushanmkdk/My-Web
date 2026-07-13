@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { redirect } from "next/navigation";
 
+import { GalleryGrid } from "@/components/common/gallery-grid";
 import { Icons } from "@/components/common/icons";
 import ProjectDescription from "@/components/projects/project-description";
 import { buttonVariants } from "@/components/ui/button";
@@ -112,22 +113,11 @@ export default async function Project({ params }: ProjectPageProps) {
           <h2 className="inline-block font-heading text-3xl leading-tight lg:text-3xl mb-5">
             Gallery
           </h2>
-          <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
-            {project.galleryImages.map((img) => (
-              <div
-                key={img}
-                className="relative aspect-square overflow-hidden rounded-md border bg-muted"
-              >
-                <Image
-                  src={img}
-                  alt={project.companyName}
-                  fill
-                  className="object-cover transition-colors"
-                  sizes="(min-width: 640px) 33vw, 50vw"
-                />
-              </div>
-            ))}
-          </div>
+          <GalleryGrid
+            images={project.galleryImages}
+            alt={project.companyName}
+            className="grid-cols-2 sm:grid-cols-3"
+          />
         </div>
       )}
 
