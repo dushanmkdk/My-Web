@@ -40,7 +40,7 @@ export const experiences: ExperienceInterface[] = [
   },
   {
     id: "lhi",
-    position: "Research Engineer (Water Resources and Coastal)",
+    position: "Research Engineer (Coastal and Water Resources)",
     company: "Lanka Hydraulic Institute Ltd (LHI)",
     location: "Colombo, Sri Lanka",
     startDate: new Date("2024-10-01"),
