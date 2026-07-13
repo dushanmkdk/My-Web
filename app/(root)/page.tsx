@@ -16,12 +16,14 @@ import {
 import ContributionCard from "@/components/contributions/contribution-card";
 import EducationCard from "@/components/education/education-card";
 import ExperienceCard from "@/components/experience/experience-card";
+import ExtracurricularCard from "@/components/extracurricular/extracurricular-card";
 import ProjectCard from "@/components/projects/project-card";
 import SkillsCard from "@/components/skills/skills-card";
 import { Button, buttonVariants } from "@/components/ui/button";
 import { featuredContributions } from "@/config/contributions";
 import { education } from "@/config/education";
 import { experiences } from "@/config/experience";
+import { extracurricular } from "@/config/extracurricular";
 import { pagesConfig } from "@/config/pages";
 import { featuredProjects } from "@/config/projects";
 import { siteConfig } from "@/config/site";
@@ -102,7 +104,7 @@ export default function IndexPage() {
           </AnimatedText>
           <div className="mt-4 max-w-[42rem] text-center">
             <p className="leading-normal text-muted-foreground text-sm sm:text-base">
-              Coastal and port engineering master&apos;s student with hands-on
+              Coastal and Port Engineering master&apos;s student with hands-on
               experience in numerical and physical modeling of coastal systems.
             </p>
           </div>
@@ -339,6 +341,39 @@ export default function IndexPage() {
             </Button>
           </Link>
         </AnimatedText>
+      </AnimatedSection>
+      <AnimatedSection
+        direction="up"
+        className="container space-y-6 py-10 my-14"
+        id="extra-curricular"
+      >
+        <div className="mx-auto flex max-w-[58rem] flex-col items-center space-y-4 text-center">
+          <AnimatedText
+            as="h2"
+            className="font-heading text-3xl leading-[1.1] sm:text-3xl md:text-6xl"
+          >
+            Extra Curricular
+          </AnimatedText>
+          <AnimatedText
+            as="p"
+            delay={0.2}
+            className="max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7"
+          >
+            Beyond engineering — sports achievements and community
+            leadership.
+          </AnimatedText>
+        </div>
+        <div className="mx-auto flex max-w-3xl flex-col gap-4">
+          {extracurricular.map((item, index) => (
+            <AnimatedSection
+              key={item.id}
+              delay={0.1 * (index + 1)}
+              direction="up"
+            >
+              <ExtracurricularCard item={item} />
+            </AnimatedSection>
+          ))}
+        </div>
       </AnimatedSection>
     </ClientPageWrapper>
   );

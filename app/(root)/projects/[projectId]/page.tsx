@@ -107,32 +107,29 @@ export default async function Project({ params }: ProjectPageProps) {
         />
       </div>
 
-      <div className="mb-7 ">
-        <h2 className="inline-block font-heading text-3xl leading-tight lg:text-3xl mb-5">
-          Page Info
-        </h2>
-        {project.pagesInfoArr.map((page, ind) => (
-          <div key={ind}>
-            <h3 className="flex items-center font-heading text-xl leading-tight lg:text-xl mt-3">
-              <Icons.star className="h-5 w-5 mr-2" /> {page.title}
-            </h3>
-            <div>
-              <p>{page.description}</p>
-              {page.imgArr.map((img, ind) => (
+      {project.galleryImages && project.galleryImages.length > 0 && (
+        <div className="mb-7">
+          <h2 className="inline-block font-heading text-3xl leading-tight lg:text-3xl mb-5">
+            Gallery
+          </h2>
+          <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
+            {project.galleryImages.map((img) => (
+              <div
+                key={img}
+                className="relative aspect-square overflow-hidden rounded-md border bg-muted"
+              >
                 <Image
                   src={img}
-                  key={ind}
-                  alt={img}
-                  width={720}
-                  height={405}
-                  className="my-4 rounded-md border bg-muted transition-colors"
-                  priority
+                  alt={project.companyName}
+                  fill
+                  className="object-cover transition-colors"
+                  sizes="(min-width: 640px) 33vw, 50vw"
                 />
-              ))}
-            </div>
+              </div>
+            ))}
           </div>
-        ))}
-      </div>
+        </div>
+      )}
 
       <hr className="mt-12" />
       <div className="flex justify-center py-6 lg:py-10">

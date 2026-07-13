@@ -13,6 +13,7 @@ export interface ExperienceInterface {
   companyUrl?: string;
   logo?: string;
   coverImage?: string;
+  coverImagePosition?: string;
   images?: string[];
 }
 
@@ -79,5 +80,6 @@ export const experiences: ExperienceInterface[] = [
     ],
     skills: ["AutoCAD", "Civil 3D", "Revit"],
     coverImage: "/experience/maga-site.jpg",
+    coverImagePosition: "center 30%",
   },
 ];

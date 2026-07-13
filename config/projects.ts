@@ -1,11 +1,5 @@
 import { ValidCategory, ValidExpType, ValidSkills } from "./constants";
 
-interface PagesInfoInterface {
-  title: string;
-  imgArr: string[];
-  description?: string;
-}
-
 interface DescriptionDetailsInterface {
   paragraphs: string[];
   bullets: string[];
@@ -24,7 +18,7 @@ export interface ProjectInterface {
   endDate: Date;
   companyLogoImg: any;
   descriptionDetails: DescriptionDetailsInterface;
-  pagesInfoArr: PagesInfoInterface[];
+  galleryImages?: string[];
 }
 
 export const Projects: ProjectInterface[] = [
@@ -39,13 +33,12 @@ export const Projects: ProjectInterface[] = [
     startDate: new Date("2025-08-01"),
     endDate: new Date("2027-05-01"),
     companyLogoImg: "/projects/barrier-island.jpg",
-    pagesInfoArr: [
-      {
-        title: "Model Development",
-        description:
-          "Setting up and calibrating a coupled hydrodynamic-morphodynamic Delft3D model for a Florida barrier island, driven by storm and hurricane wave conditions.",
-        imgArr: ["/projects/barrier-island.jpg"],
-      },
+    galleryImages: [
+      "/projects/unf-delft3d-research/barrier_1.jpg",
+      "/projects/unf-delft3d-research/barrier_2.jpg",
+      "/projects/unf-delft3d-research/barrier_3.jpg",
+      "/projects/unf-delft3d-research/barrier_4.png",
+      "/projects/unf-delft3d-research/barrier_5.png",
     ],
     descriptionDetails: {
       paragraphs: [
@@ -62,63 +55,55 @@ export const Projects: ProjectInterface[] = [
   {
     id: "lakbi-3d-physical-modelling",
     companyName:
-      "3D Physical Modelling for Breakwater Design - Lakbi Fishery Harbour, Oman",
+      "3D Physical Modelling of Breakwaters – Lakbi Fishery Harbour & Hadbin Fish Landing Center, Oman",
     type: "Professional",
     category: ["Coastal Engineering", "Research"],
     shortDescription:
-      "Constructed a 1:63.23 scale 3D physical model in a controlled basin to analyze the stability and performance of the designed breakwater under multiple return-period wave conditions.",
+      "3D physical models built within a 30m × 40m controlled wave basin to analyze the stability and performance of breakwater sections for the Lakbi Fishery Harbour and Hadbin Fish Landing Center in Oman, under multiple return-period wave conditions.",
     techStack: [],
     startDate: new Date("2024-12-01"),
     endDate: new Date("2025-01-01"),
     companyLogoImg: "/projects/physical-modelling-3d.jpg",
-    pagesInfoArr: [
-      {
-        title: "3D Basin Model Testing",
-        description:
-          "Basin-scale physical model of a breakwater section tested under multiple return-period wave conditions to assess rock displacement and structural integrity.",
-        imgArr: ["/projects/physical-modelling-3d.jpg"],
-      },
-    ],
+    galleryImages: Array.from(
+      { length: 10 },
+      (_, i) => `/projects/lakbi-3d-physical-modelling/3d_${101 + i}.jpg`
+    ),
     descriptionDetails: {
       paragraphs: [
-        "Associated with Lanka Hydraulic Institute, a 3D physical model was constructed to analyze the stability and performance of a specific section of the designed breakwater. The bathymetry and model was built at a 1:63.23 scale within a controlled basin environment to simulate real-world wave conditions.",
-        "Comprehensive wave loading tests were conducted for multiple return periods: 1-Year, 5-Year, 10-Year, 50-Year, 100-Year, and an Overload Condition (High Water Level and Low Water Level). Waves were generated through two directions, 90E and 145SE. Post-test analysis focused on rock displacements, ensuring compliance with allowable damage levels for structural integrity. The findings from this study played a critical role in optimizing the breakwater design for enhanced durability and resilience against varying wave conditions.",
+        "Associated with Lanka Hydraulic Institute, 3D physical models were constructed to analyze the stability and performance of specific breakwater sections for the Lakbi Fishery Harbour and Hadbin Fish Landing Center projects in Oman. Bathymetry and structures were built within a 30m × 40m controlled wave basin to simulate real-world wave conditions.",
+        "Comprehensive wave loading tests were conducted for multiple return periods — 1-Year, 5-Year, 10-Year, 50-Year, 100-Year, and an Overload Condition (High Water Level and Low Water Level) — with waves generated from multiple directions. Post-test analysis focused on rock and armour unit displacements, ensuring compliance with allowable damage levels for structural integrity. Findings from these studies played a critical role in optimizing breakwater designs for enhanced durability and resilience against varying wave conditions.",
       ],
       bullets: [
-        "Built a 1:63.23 scale 3D basin model to test breakwater stability and performance.",
-        "Conducted wave loading tests for 1, 5, 10, 50, and 100-year return periods plus an overload condition, from two wave directions (90E and 145SE).",
-        "Analyzed rock displacements against allowable damage levels to optimize the breakwater design.",
+        "Built 3D physical models within a 30m × 40m controlled wave basin for the Lakbi Fishery Harbour and Hadbin Fish Landing Center, Oman.",
+        "Conducted wave loading tests across six return-period and overload scenarios, with waves generated from multiple directions.",
+        "Analyzed rock and armour unit displacements against allowable damage levels to optimize breakwater designs.",
       ],
     },
   },
   {
     id: "lakbi-2d-physical-modelling",
     companyName:
-      "2D Physical Modelling for Breakwater Design – Lakbi Fishery Harbour, Oman",
+      "2D Physical Modelling of Breakwaters – Lakbi, Hadbin & Haramel Fishery Harbours, Oman",
     type: "Professional",
     category: ["Coastal Engineering", "Research"],
     shortDescription:
-      "Conducted a 1:31.83 scale 2D flume study to assess the stability and performance of a breakwater section using Core-Loc armour units and rock materials under multiple return-period wave conditions.",
+      "2D flume studies assessing the stability and performance of breakwater sections for the Lakbi, Hadbin, and Haramel fishery harbours in Oman, using Core-Loc, Accropode, and rock armour units under multiple return-period wave conditions.",
     techStack: [],
     startDate: new Date("2024-10-01"),
     endDate: new Date("2024-11-01"),
     companyLogoImg: "/projects/physical-modelling-2d.jpg",
-    pagesInfoArr: [
-      {
-        title: "2D Flume Model Testing",
-        description:
-          "Flume-scale physical model of a breakwater section tested under multiple return-period wave conditions using Core-Loc armour units and rock materials.",
-        imgArr: ["/projects/physical-modelling-2d.jpg"],
-      },
-    ],
+    galleryImages: Array.from(
+      { length: 14 },
+      (_, i) => `/projects/lakbi-2d-physical-modelling/photo_${i + 1}.jpg`
+    ),
     descriptionDetails: {
       paragraphs: [
-        "As part of the Design and Build Services for the Development of the Existing Lakbi Fishery Harbour in Oman, a 2D physical modelling study was conducted to assess the stability and performance of a specific breakwater section. The breakwater section was scaled down to 1:31.83 and tested in a 0.8m-wide flume under various return periods, including 1-YRP, 5-YRP, 10-YRP, 50-YRP, 100-YRP, and an Overload condition, considering both high water level and low water level scenarios.",
-        "The study utilized Core-Loc armour units and rock materials, with wave gauges strategically placed to measure wave heights. Rocking movements and structural damage were meticulously analyzed against allowable damage thresholds to ensure the breakwater's resilience under different wave conditions.",
+        "As part of Design and Build Services for the development of existing fishery harbours in Oman — Lakbi Fishery Harbour, Hadbin Fish Landing Center, and Haramel Fishery Harbour — 2D physical modelling studies were conducted to assess the stability and performance of specific breakwater sections. Sections were tested in a 0.8m-wide, 30m-long flume under various return periods, including 1-Year, 5-Year, 10-Year, 50-Year, 100-Year, and an Overload condition, considering both high and low water level scenarios.",
+        "The studies utilized Core-Loc, Accropode armour units, and rock materials, with wave gauges strategically placed to measure wave heights. Rocking movements and structural damage were meticulously analyzed against allowable damage thresholds to ensure the breakwaters' resilience under design conditions.",
       ],
       bullets: [
-        "Scaled a breakwater section to 1:31.83 and tested it in a 0.8m-wide flume across six return-period and overload scenarios.",
-        "Used Core-Loc armour units and rock materials, with wave gauges placed to measure wave heights.",
+        "Tested breakwater sections for three Oman fishery harbours in a 0.8m-wide, 30m-long flume across six return-period and overload scenarios.",
+        "Used Core-Loc, Accropode armour units, and rock materials, with wave gauges placed to measure wave heights.",
         "Analyzed rocking movements and structural damage against allowable damage thresholds.",
       ],
     },
@@ -134,14 +119,10 @@ export const Projects: ProjectInterface[] = [
     startDate: new Date("2025-04-30"),
     endDate: new Date("2025-05-02"),
     companyLogoImg: "/projects/bathymetric-survey.jpg",
-    pagesInfoArr: [
-      {
-        title: "Nearshore Survey",
-        description:
-          "Hydrographic survey of a 100m x 900m nearshore strip adjacent to the Reverse Osmosis Plant at Thalayadi, Sri Lanka.",
-        imgArr: ["/projects/bathymetric-survey.jpg"],
-      },
-    ],
+    galleryImages: Array.from(
+      { length: 6 },
+      (_, i) => `/projects/bathymetric-survey-gallery/photo_${i + 1}.jpg`
+    ),
     descriptionDetails: {
       paragraphs: [
         "I took part in a two-day bathymetry survey from 30th April to 2nd May, conducted by Lanka Hydraulic Institute Ltd. The survey covered a 100m x 900m nearshore strip adjacent to the Reverse Osmosis Plant at Thalayadi, Sri Lanka, as part of the Jaffna and Kilinochchi Water Supply and Sanitation Project.",
@@ -164,21 +145,11 @@ export const Projects: ProjectInterface[] = [
     techStack: ["ANSYS Fluent"],
     startDate: new Date("2023-08-01"),
     endDate: new Date("2024-07-01"),
-    companyLogoImg: "/projects/wind-loading-paper.jpg",
-    pagesInfoArr: [
-      {
-        title: "Published Paper",
-        description:
-          "Numerical Investigation of the Effects of Boundary Walls on the Wind Loading of a Gable Roof, Low-Rise Building — published in Lecture Notes in Civil Engineering, Vol. 652 (Springer Nature).",
-        imgArr: ["/projects/wind-loading-paper.jpg"],
-      },
-      {
-        title: "CFD Simulation",
-        description:
-          "Simulated wind pressure distribution on gable-roof low-rise buildings using ANSYS Fluent to inform structural design loads.",
-        imgArr: ["/projects/wind-loading-cfd.svg"],
-      },
-    ],
+    companyLogoImg: "/projects/wind-loading-cfd-gallery/photo_2.jpg",
+    galleryImages: Array.from(
+      { length: 2 },
+      (_, i) => `/projects/wind-loading-cfd-gallery/photo_${i + 1}.jpg`
+    ),
     descriptionDetails: {
       paragraphs: [
         "This undergraduate research project investigated wind loading on gable-roof, low-rise buildings through CFD simulations in ANSYS Fluent.",

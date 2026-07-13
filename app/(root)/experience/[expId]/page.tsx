@@ -175,6 +175,7 @@ export default async function ExperienceDetailPage({
                   alt={`${experience.position} at ${experience.company}`}
                   fill
                   className="object-cover"
+                  style={{ objectPosition: experience.coverImagePosition ?? "center" }}
                   priority
                 />
               </div>

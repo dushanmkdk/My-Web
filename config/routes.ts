@@ -21,6 +21,10 @@ export const routesConfig: any = {
       href: "/skills",
     },
     {
+      title: "Extra Curricular",
+      href: "/#extra-curricular",
+    },
+    {
       title: "Contact",
       href: "/contact",
     },
