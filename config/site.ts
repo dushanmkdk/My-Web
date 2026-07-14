@@ -12,8 +12,8 @@ export const siteConfig = {
     phone: "+1 (904) 422-6735",
   },
   ogImage: "/profile-img.jpg",
-  iconIco: "/profile-img.jpg",
-  logoIcon: "/profile-img.jpg",
+  iconIco: "/logo.png",
+  logoIcon: "/logo.png",
   keywords: [
     "Dushan Kavishka",
     "Civil Engineer",
